@@ -13,24 +13,26 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="fm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="@[toc] Security 是什么Spring Security 是一个功能强大且可高度定制的身份验证和访问控制框架，它专注于为 Java 应用程序提供身份验证和授权。 Sercurity 的主要功能构成&#x3D;&#x3D;Spring sercurity 所有的功能都来源于来自构成它的各种 Filters (过滤器)&#x3D;&#x3D;  Sercurity 的功能我们可以划分为传统">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/11/23/hello-world/index.html">
+<meta property="og:title" content="Spring Security介绍与认证功能">
+<meta property="og:url" content="http://example.com/2023/11/25/Spring%20Security%E4%BB%8B%E7%BB%8D%E4%B8%8E%E8%AE%A4%E8%AF%81%E5%8A%9F%E8%83%BD/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="@[toc] Security 是什么Spring Security 是一个功能强大且可高度定制的身份验证和访问控制框架，它专注于为 Java 应用程序提供身份验证和授权。 Sercurity 的主要功能构成&#x3D;&#x3D;Spring sercurity 所有的功能都来源于来自构成它的各种 Filters (过滤器)&#x3D;&#x3D;  Sercurity 的功能我们可以划分为传统">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-23T04:55:58.556Z">
-<meta property="article:modified_time" content="2023-11-23T04:55:58.556Z">
+<meta property="article:published_time" content="2023-11-25T05:41:03.518Z">
+<meta property="article:modified_time" content="2023-11-27T13:29:57.165Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Spring">
+<meta property="article:tag" content="sercurity">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Hello World - fm</title>
+  <title>Spring Security介绍与认证功能 - fm</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="Spring Security介绍与认证功能"></span>
           
         </div>
 
@@ -207,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-11-23 12:55" pubdate>
-          2023年11月23日 下午
+        <time datetime="2023-11-25 13:41" pubdate>
+          2023年11月25日 下午
         </time>
       </span>
     
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          2.4k 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          4 分钟
+          21 分钟
         
       </span>
     
@@ -267,24 +269,38 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">Hello World</h1>
+            <h1 id="seo-header">Spring Security介绍与认证功能</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
+                <p>@[toc]</p>
+<h1 id="Security-是什么"><a href="#Security-是什么" class="headerlink" title="Security 是什么"></a>Security 是什么</h1><p><strong>Spring Security 是一个功能强大且可高度定制的身份验证和访问控制框架，它专注于为 Java 应用程序提供身份验证和授权。</strong></p>
+<h1 id="Sercurity-的主要功能构成"><a href="#Sercurity-的主要功能构成" class="headerlink" title="Sercurity 的主要功能构成"></a>Sercurity 的主要功能构成</h1><p>&#x3D;&#x3D;Spring sercurity 所有的功能都来源于来自构成它的各种 Filters (过滤器)&#x3D;&#x3D;</p>
+<ul>
+<li>Sercurity 的功能我们可以划分为传统的两大类：</li>
+</ul>
+<p><strong>1. 认证：确认用户身份的合法性即识别用户</strong><br><strong>2. 授权：检验用户所拥有权限并返回给用户</strong></p>
+<p>这里主要介绍认证的应用接口</p>
+<h1 id="Sercurity-认证流程"><a href="#Sercurity-认证流程" class="headerlink" title="Sercurity 认证流程"></a>Sercurity 认证流程</h1><h2 id="识别"><a href="#识别" class="headerlink" title="识别"></a>识别</h2><p>Sercurity 识别框架主要提供了四个接口：</p>
+<ul>
+<li>Userdetails 接口：用于封装用户的详细信息例如用户名和密码之类，默认实现类是 User，自定义实现需求的用户主体只需要实现这个接口即可，下面是示例代码：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">User</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">UserDetails</span> &#123;  <br><span class="hljs-comment">//必要方法请自行补充，table注释为数据库链接注释，下文会讲</span><br><span class="hljs-meta">@TableId(value=&quot;id&quot;,type= IdType.AUTO)</span><br><span class="hljs-keyword">private</span> <span class="hljs-type">long</span> id;  <br><span class="hljs-meta">@TableField(&quot;username&quot;)</span><br><span class="hljs-keyword">private</span> String username;  <br><span class="hljs-meta">@TableField(&quot;password&quot;)</span><br><span class="hljs-keyword">private</span> String password;  <br><span class="hljs-meta">@TableField(exist = false)</span><span class="hljs-comment">//不在表内</span><br><span class="hljs-keyword">private</span> List&lt;GrantedAuthority&gt; authorities;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
+<ul>
+<li>UserDetailsService 接口：用于进行用户验证的地方，其中提供了一个加载用户的方法        loadUserByUsername，重写这段方法即可自定义用户验证方法, 常见的比如通过数据库验证，这里以 mysql 数据库为例（这里实际上实现通过数据库授权）：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/*</span><br><span class="hljs-comment">使用user类型均为自定义用户类型</span><br><span class="hljs-comment">此外，除了需要配置数据库端口，还需要引入入mybatis-plus进行连接和sql语句操作</span><br><span class="hljs-comment">具体需求如下：1，多余的对应数据库中需要操作的表的类，我这里多加了一个权限类perm对应权限                       表，并进行相应注释</span><br><span class="hljs-comment">			 2，实现相应的数据库操作marpper类</span><br><span class="hljs-comment">			 3，写出对应表的service接口         </span><br><span class="hljs-comment">*/</span><br><span class="hljs-comment">//实现service，以user为例子</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">UserService</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">IService</span>&lt;User&gt; &#123;  <br>&#125;<br><br><span class="hljs-comment">//实现marpper类，以user类为例子</span><br><span class="hljs-meta">@Mapper</span>  <br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">UserMapper</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">BaseMapper</span>&lt;User&gt; &#123;  <br>&#125;<br><br><span class="hljs-comment">//具体重写方法</span><br><span class="hljs-comment">//拦截返回的用户信息（username）进行user加载  </span><br><span class="hljs-meta">@Service</span>  <br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">UserServiceImpl</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">ServiceImpl</span>&lt;UserMapper, User&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">UserService</span>, UserDetailsService &#123;  <br><br><span class="hljs-meta">@Autowired</span>  <br>UserMapper userMapper;  <br><br><span class="hljs-meta">@Autowired</span>  <br>PermMapper permMapper;<br><br><span class="hljs-keyword">public</span> UserDetails <span class="hljs-title function_">loadUserByUsername</span><span class="hljs-params">(String username)</span> <span class="hljs-keyword">throws</span> UsernameNotFoundException &#123;  <br><span class="hljs-comment">//在数据库内查找username对应的用户对象  </span><br>QueryWrapper queryWrapper=<span class="hljs-keyword">new</span> <span class="hljs-title class_">QueryWrapper</span>();  <br>queryWrapper.eq(<span class="hljs-string">&quot;username&quot;</span>,username);  <br><span class="hljs-type">User</span> <span class="hljs-variable">user</span> <span class="hljs-operator">=</span>userMapper.selectOne(queryWrapper);  <br><br><span class="hljs-comment">//异常处理  </span><br><span class="hljs-keyword">if</span> (user==<span class="hljs-literal">null</span>) &#123;  <br>	<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">UsernameNotFoundException</span>(<span class="hljs-string">&quot;用户名未找到&quot;</span>);  <br>&#125;  <br><br><span class="hljs-comment">//根据id查找权限  </span><br><span class="hljs-type">QueryWrapper</span> <span class="hljs-variable">permQueryWrapper</span> <span class="hljs-operator">=</span><span class="hljs-keyword">new</span> <span class="hljs-title class_">QueryWrapper</span>();  <br>permQueryWrapper.eq(<span class="hljs-string">&quot;id&quot;</span>,user.getId());  <br><br>List&lt;Perm&gt; perms= permMapper.selectList(permQueryWrapper);  <br><br>List&lt;String&gt; permTags=perms.stream().map(Perm::getAuthority).collect(Collectors.toList());  <br><br>user.setAuthorities(AuthorityUtils.createAuthorityList(permTags));  <br><br><span class="hljs-keyword">return</span> user;  <br>&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<ul>
+<li><p>Authentication：主要包含认证过的用户信息，UsernamePasswordAuthenticationToken 便是它的一个实现类</p>
+</li>
+<li><p>AuthenticationManager：接口用于执行认证 Authentication 操作，这里直接在     userdetailservice执行认证即可</p>
+</li>
+</ul>
+<h2 id="校验"><a href="#校验" class="headerlink" title="校验"></a>校验</h2><p>初步认证过后可以进行 token 令牌校验来减少反复认证，默认实现是</p>
+<p>UsernamePasswordAuthenticationToken，这里我们将进行自定义的 Jwt 令牌校验操作</p>
 
                 
               </div>
@@ -293,6 +309,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/SSM/" class="category-chain-item">SSM</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Spring/" class="print-no-link">#Spring</a>
+      
+        <a href="/tags/sercurity/" class="print-no-link">#sercurity</a>
+      
+    </div>
   
 </div>
 
@@ -302,20 +348,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/11/23/hello-world/</div>
+      <div>Spring Security介绍与认证功能</div>
+      <div>http://example.com/2023/11/25/Spring Security介绍与认证功能/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>fm</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年11月23日</div>
+          <div>2023年11月25日</div>
         </div>
       
       
@@ -347,18 +393,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/11/24/fm/" title="">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/05/30/SSM05-Spring%E4%B8%AD%E7%9A%84AOP%E6%A6%82%E5%BF%B5/" title="SSM05-Spring中的AOP概念">
-                        <span class="hidden-mobile">SSM05-Spring中的AOP概念</span>
+                      <a href="/2023/11/24/fm/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
