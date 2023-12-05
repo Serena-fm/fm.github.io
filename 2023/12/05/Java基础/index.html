@@ -13,24 +13,30 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="fm">
   <meta name="keywords" content="">
   
     <meta name="description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及同包">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fm">
+<meta property="og:title" content="Java面向对象基础">
 <meta property="og:url" content="http://example.com/2023/12/05/Java%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="fm">
 <meta property="og:description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及同包">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-3.png">
+<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-1.png">
 <meta property="article:published_time" content="2023-12-05T07:00:05.168Z">
-<meta property="article:modified_time" content="2023-12-05T09:12:15.524Z">
+<meta property="article:modified_time" content="2023-12-05T15:33:41.817Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="面向对象">
+<meta property="article:tag" content="基础">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-3.png">
   
   
   
-  <title>fm</title>
+  <title>Java面向对象基础 - fm</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +202,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="Java面向对象基础"></span>
           
         </div>
 
@@ -267,7 +273,7 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">Java面向对象基础</h1>
             
             
               <div class="markdown-body">
@@ -278,6 +284,7 @@
 <li><strong>protected</strong>：可以修饰成员变量，成员方法，构造方法，但不能修饰类(此处指的是外部类，内部类不加以考虑)。被protected修饰后，只能被<strong>同包下的其他类</strong>访问。如果不同包下的类要访问被protected修饰的成员，这个类必须是<strong>其子类</strong>。</li>
 <li><strong>public</strong> ：权限最大的修饰符，他可以修饰类，成员变量，成员方法，构造方法。被public修饰后，可以再任何一个类中，不管同不同包，任意使用。</li>
 </ul>
+<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-3.png" srcset="/img/loading.gif" lazyload alt="image-20231205233323143"></p>
 <h2 id="工作内存管理"><a href="#工作内存管理" class="headerlink" title="工作内存管理"></a>工作内存管理</h2><ul>
 <li><p>方法区：字节码文件记载时进入的内存（<strong>类似于声明，不同文件class记录的变量和方法</strong>）</p>
 </li>
@@ -287,6 +294,7 @@
 <p><strong>注： 进行简单的赋值操作如A b&#x3D;new A（）；A a&#x3D;b; 会使得a,b两个变量指向同一片堆内存;</strong></p>
 </li>
 </ul>
+<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-1.png" srcset="/img/loading.gif" lazyload alt="image-20231205232708431"></p>
 <h2 id="工具类ArrayList集合使用"><a href="#工具类ArrayList集合使用" class="headerlink" title="工具类ArrayList集合使用"></a>工具类ArrayList集合使用</h2><ul>
 <li><p>对比于数组： 长度不固定，有自然的相应接口函数</p>
 </li>
@@ -310,6 +318,38 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/Java/" class="category-chain-item">Java</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/JAVA/" class="print-no-link">#JAVA</a>
+      
+        <a href="/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/" class="print-no-link">#面向对象</a>
+      
+        <a href="/tags/%E5%9F%BA%E7%A1%80/" class="print-no-link">#基础</a>
+      
+    </div>
   
 </div>
 
@@ -319,14 +359,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>Java面向对象基础</div>
       <div>http://example.com/2023/12/05/Java基础/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>fm</div>
         </div>
       
       
@@ -364,9 +404,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/05/Java%E8%BF%9B%E9%98%B6/" title="">
+                      <a href="/2023/12/05/Java%E8%BF%9B%E9%98%B6/" title="Java面向对象进阶">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">Java面向对象进阶</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
