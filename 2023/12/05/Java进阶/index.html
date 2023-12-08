@@ -16,16 +16,16 @@
   <meta name="author" content="fm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Java面向对象进阶Static static修饰的静态变量和方法是所有实例或者类名共用。堆之中的内存也是如此，随着类的加载而加载 调用：类名和实例都可以调用 作用： 多用于工具类和测试类 注意事项：静态方法只能访问静态变量和方法，但非静态可以访问静态  面向对象三大特征封装 封装对应数据并提供数据对应的行为  继承（extends） 类于类之间存在共性的时候，考虑使用继承，减少代码复用以及代码维">
+    <meta name="description" content="Java面向对象进阶static static修饰的静态变量和方法是所有实例或者类名共用。堆之中的内存也是如此，随着类的加载而加载 调用：类名和实例都可以调用 作用： 多用于工具类和测试类 注意事项：静态方法只能访问静态变量和方法，但非静态可以访问静态  this 本质：一个指向对象地址的变量，在函数参数列表内默认加载  面向对象三大特征封装 封装对应数据并提供数据对应的行为  继承（exte">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面向对象进阶">
 <meta property="og:url" content="http://example.com/2023/12/05/Java%E8%BF%9B%E9%98%B6/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="Java面向对象进阶Static static修饰的静态变量和方法是所有实例或者类名共用。堆之中的内存也是如此，随着类的加载而加载 调用：类名和实例都可以调用 作用： 多用于工具类和测试类 注意事项：静态方法只能访问静态变量和方法，但非静态可以访问静态  面向对象三大特征封装 封装对应数据并提供数据对应的行为  继承（extends） 类于类之间存在共性的时候，考虑使用继承，减少代码复用以及代码维">
+<meta property="og:description" content="Java面向对象进阶static static修饰的静态变量和方法是所有实例或者类名共用。堆之中的内存也是如此，随着类的加载而加载 调用：类名和实例都可以调用 作用： 多用于工具类和测试类 注意事项：静态方法只能访问静态变量和方法，但非静态可以访问静态  this 本质：一个指向对象地址的变量，在函数参数列表内默认加载  面向对象三大特征封装 封装对应数据并提供数据对应的行为  继承（exte">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-2.png">
 <meta property="article:published_time" content="2023-12-05T08:47:16.970Z">
-<meta property="article:modified_time" content="2023-12-05T15:33:55.712Z">
+<meta property="article:modified_time" content="2023-12-06T04:01:28.343Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JAVA">
 <meta property="article:tag" content="面向对象">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          514 字
+          1.2k 字
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          5 分钟
+          10 分钟
         
       </span>
     
@@ -276,11 +276,16 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Java面向对象进阶"><a href="#Java面向对象进阶" class="headerlink" title="Java面向对象进阶"></a>Java面向对象进阶</h1><h2 id="Static"><a href="#Static" class="headerlink" title="Static"></a>Static</h2><ul>
+                <span id="more"></span>
+
+<h1 id="Java面向对象进阶"><a href="#Java面向对象进阶" class="headerlink" title="Java面向对象进阶"></a>Java面向对象进阶</h1><h2 id="static"><a href="#static" class="headerlink" title="static"></a>static</h2><ul>
 <li>static修饰的静态变量和方法是所有实例或者类名共用。<strong>堆之中的内存也是如此，随着类的加载而加载</strong></li>
 <li>调用：类名和实例都可以调用</li>
 <li>作用： 多用于工具类和测试类</li>
 <li><strong>注意事项：静态方法只能访问静态变量和方法，但非静态可以访问静态</strong></li>
+</ul>
+<h2 id="this"><a href="#this" class="headerlink" title="this"></a>this</h2><ul>
+<li>本质：一个指向对象地址的变量，在函数参数列表内默认加载</li>
 </ul>
 <h2 id="面向对象三大特征"><a href="#面向对象三大特征" class="headerlink" title="面向对象三大特征"></a>面向对象三大特征</h2><h3 id="封装"><a href="#封装" class="headerlink" title="封装"></a>封装</h3><ul>
 <li>封装对应数据并提供数据对应的行为</li>
@@ -299,7 +304,7 @@
 <li><p>变量，方法的赋值与调用：</p>
 <ul>
 <li>当子类的相关（未区分）变量被调用或者赋值的时候会优先寻找子类的变量，<strong>就近原则</strong>（局部-&gt;本类-&gt;父类）</li>
-<li><strong>Super</strong>修饰方法被调用的时候直接调用父类中的同名方法</li>
+<li><strong>Super</strong>修饰方法被调用的时候直接调用父类中的同名方法，本质是父类存储空间</li>
 <li><strong>@Override</strong>重写父类方法<ul>
 <li>重写的本质：<strong>虚方法表</strong>（一个类之中非静态，非私有，非固定（final）的方法表）<ul>
 <li>当子类继承的时候会将父类的虚方法表中的方法加到虚方法表内，在此基础上加上自己的方法</li>
@@ -312,10 +317,89 @@
 </li>
 </ul>
 </li>
-<li></li>
+<li><p>构造方法：</p>
+<ul>
+<li><p>无法继承</p>
+</li>
+<li><p>子类之中的所有构造方法<strong>默认</strong>先访问父类之中的无参构造，再执行自己<strong>以访问父类数据</strong></p>
+</li>
+<li><p>可以使用super（参数列表）调用父类有参构造</p>
+</li>
 </ul>
 </li>
 </ul>
+</li>
+</ul>
+<h3 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h3><ul>
+<li><p>代码形式：（<strong>继承&#x2F;实现是多态的前提条件</strong>）</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//当Person是Student父类时候</span><br><span class="hljs-type">Student</span> <span class="hljs-variable">s</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br><span class="hljs-type">Person</span> <span class="hljs-variable">p</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>本质：将子类对象赋值给父类类型引用</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li><p>调用变量时优先调用<strong>父类变量</strong></p>
+</li>
+<li><p>调用方法时调用<strong>子类方法</strong>，但是父类未含有此方法编译会报错</p>
+<ul>
+<li>原因：子类方法将虚方法表内父类方法覆盖了，但变量无法覆盖</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>优势：</p>
+<ul>
+<li>可以实现解耦合，便于维护</li>
+<li>函数参数传入方便，子类共用父类传参函数</li>
+</ul>
+</li>
+</ul>
+<h2 id="final"><a href="#final" class="headerlink" title="final"></a>final</h2><ul>
+<li><p>修饰变量</p>
+<ul>
+<li>修饰基本类型： 值不变</li>
+<li>修饰引用类型： <strong>地址不变，但是内部值可以改变</strong></li>
+</ul>
+</li>
+<li><p>修饰方法： 最终方法，不能重写</p>
+</li>
+<li><p>修饰类：最终类，无法继承</p>
+</li>
+</ul>
+<h2 id="抽象类（abstract）"><a href="#抽象类（abstract）" class="headerlink" title="抽象类（abstract）"></a>抽象类（abstract）</h2><ul>
+<li><p><strong>无法实例化</strong>，但可以有构造方法</p>
+</li>
+<li><p>有抽象方法一定是抽象类，反之不一定</p>
+</li>
+<li><p>抽象子类：</p>
+<ul>
+<li>要实例化则要重写所有抽象方法，否则仍就是抽象类</li>
+</ul>
+</li>
+<li><p>目的：规范子类格式</p>
+</li>
+</ul>
+<h2 id="接口（interface）"><a href="#接口（interface）" class="headerlink" title="接口（interface）"></a>接口（interface）</h2><ul>
+<li><p>无法实例化</p>
+</li>
+<li><p>通过implements实现</p>
+</li>
+<li><p>接口子类：</p>
+<ul>
+<li>要实例化则要重写所有接口方法，否则仍就是抽象类</li>
+</ul>
+</li>
+<li><p><strong>一个类可以实现多个接口</strong>，还可以同时继承</p>
+</li>
+<li><p>特点：</p>
+<ul>
+<li>成员变量： 只能是常量，默认public static final修饰</li>
+<li>不含有构造方法</li>
+<li>成员方法： 只能是抽象方法，默认public abstract修饰</li>
+</ul>
+</li>
+</ul>
+<h2 id="内部类和外部类"><a href="#内部类和外部类" class="headerlink" title="内部类和外部类"></a>内部类和外部类</h2><p>…….</p>
 
                 
               </div>
@@ -407,6 +491,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/12/08/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" title="Java多线程">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Java多线程</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">

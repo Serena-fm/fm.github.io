@@ -16,17 +16,17 @@
   <meta name="author" content="fm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及同包">
+    <meta name="description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java面向对象基础">
 <meta property="og:url" content="http://example.com/2023/12/05/Java%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及同包">
+<meta property="og:description" content="Java基础：面向对象权限修饰符 private ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。 default ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被本类以及">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-3.png">
 <meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaSe-1.png">
 <meta property="article:published_time" content="2023-12-05T07:00:05.168Z">
-<meta property="article:modified_time" content="2023-12-05T15:33:41.817Z">
+<meta property="article:modified_time" content="2023-12-06T09:21:16.391Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JAVA">
 <meta property="article:tag" content="面向对象">
@@ -225,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          812 字
+          1.3k 字
         
       </span>
     
@@ -236,7 +236,7 @@
         
         
         
-          7 分钟
+          11 分钟
         
       </span>
     
@@ -278,7 +278,9 @@
             
               <div class="markdown-body">
                 
-                <h1 id="Java基础：面向对象"><a href="#Java基础：面向对象" class="headerlink" title="Java基础：面向对象"></a>Java基础：面向对象</h1><h2 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h2><ul>
+                <span id="more"></span>
+
+<h1 id="Java基础：面向对象"><a href="#Java基础：面向对象" class="headerlink" title="Java基础：面向对象"></a>Java基础：面向对象</h1><h2 id="权限修饰符"><a href="#权限修饰符" class="headerlink" title="权限修饰符"></a>权限修饰符</h2><ul>
 <li><strong>private</strong> ：可以修饰成员变量，成员方法，构造方法，不能修饰类(此刻指的是外部类，内部类不加以考虑)。被private修饰的成员只能在其修饰的本类中访问，在其他类中不能调用（这里也可以看出为什么不能修饰class，因为private本来就是作用于类内部的东西）。</li>
 <li><strong>default</strong> ：可以修饰类，成员变量，成员方法，构造方法。被默认权限修饰后，其只能被<strong>本类以及同包下</strong>的其他类访问。</li>
 <li><strong>protected</strong>：可以修饰成员变量，成员方法，构造方法，但不能修饰类(此处指的是外部类，内部类不加以考虑)。被protected修饰后，只能被<strong>同包下的其他类</strong>访问。如果不同包下的类要访问被protected修饰的成员，这个类必须是<strong>其子类</strong>。</li>
@@ -309,6 +311,48 @@
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">boolean</span> <span class="hljs-title function_">add</span><span class="hljs-params">(E e)</span>;<br><span class="hljs-type">boolean</span> <span class="hljs-title function_">remove</span><span class="hljs-params">(E e)</span>;<span class="hljs-comment">//删除</span><br>E <span class="hljs-title function_">remove</span><span class="hljs-params">(<span class="hljs-type">int</span> index)</span>;<span class="hljs-comment">//索引删除</span><br>set(); size();<span class="hljs-comment">//等等</span><br></code></pre></td></tr></table></figure></li>
 </ul>
 </li>
+<li><p>集合拓展：</p>
+<ul>
+<li><p>单列集合<Conllection></p>
+<ul>
+<li><p>List系列集合：有序，可重复，有索引</p>
+</li>
+<li><p>Set系列：无序，不重复，无索引</p>
+</li>
+<li><p>迭代器扫描集合：</p>
+</li>
+<li><pre><code class="java">Iteretor&lt;String&gt; it = list.iterator();
+while(it.hasNext())&#123;
+    String str=it.next();
+&#125;
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs arduino"><br>+ 增强<span class="hljs-keyword">for</span>遍历：<br><br>  ```<span class="hljs-function">java</span><br><span class="hljs-function">  <span class="hljs-title">for</span><span class="hljs-params">(<span class="hljs-type">String</span> s:List)</span></span>&#123;<br>  <span class="hljs-comment">//s的操作不会影响list的数据</span><br>  &#125;<br></code></pre></td></tr></table></figure>
+</code></pre>
+</li>
+<li><p>lamada表达式</p>
+<p>…</p>
+</li>
+</ul>
+</li>
+<li><p>双列集合<map></p>
+<ul>
+<li>键值集合对象</li>
+<li>键不可以重复，值可以重复,无序无索引</li>
+<li>三种遍历..</li>
+<li>hashmap（<strong>重复的键put进去会覆盖原有键值，与hashset相反</strong>）<ul>
+<li>HashMap底层是哈希表结构的</li>
+<li>依赖hashCode方法和equals方法保证键的唯一</li>
+<li><strong>如果键存储的是自定义对象，需要重写hashCode和equals方法,如果值存储自定义对象，不需要重写hashCode和equals方法</strong></li>
+</ul>
+</li>
+<li>treemap等….</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h2><ul>
+<li><p>包装类型</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">ArrayList&lt;泛型&gt;<br></code></pre></td></tr></table></figure></li>
 </ul>
 
                 
