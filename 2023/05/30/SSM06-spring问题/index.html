@@ -13,24 +13,25 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="fm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="为什么会选择接口来注入而不是实现类直接注入？在 Spring 中，选择接口来注入而不是直接注入实现类有几个重要的原因：  松耦合： 使用接口注入可以实现松耦合（loose coupling）。 通过依赖于接口，而不是具体的实现类，你的代码与特定的实现解耦。这意味着你可以在不改变使用接口的代码的情况下，随时切换不同的实现类。   可替换性： 接口注入允许你在运行时选择不同的实现类。 这对于测试、模拟">
+    <meta name="description" content="了Spring中的问题。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fm">
-<meta property="og:url" content="http://example.com/2024/02/18/SSM06-spring%E9%97%AE%E9%A2%98/index.html">
+<meta property="og:title" content="SSM06-Spring问题">
+<meta property="og:url" content="http://example.com/2023/05/30/SSM06-spring%E9%97%AE%E9%A2%98/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="为什么会选择接口来注入而不是实现类直接注入？在 Spring 中，选择接口来注入而不是直接注入实现类有几个重要的原因：  松耦合： 使用接口注入可以实现松耦合（loose coupling）。 通过依赖于接口，而不是具体的实现类，你的代码与特定的实现解耦。这意味着你可以在不改变使用接口的代码的情况下，随时切换不同的实现类。   可替换性： 接口注入允许你在运行时选择不同的实现类。 这对于测试、模拟">
+<meta property="og:description" content="了Spring中的问题。">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-02-18T09:21:36.058Z">
-<meta property="article:modified_time" content="2024-02-18T18:24:57.374Z">
+<meta property="article:published_time" content="2023-05-30T13:00:00.000Z">
+<meta property="article:modified_time" content="2024-02-21T09:53:20.666Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>fm</title>
+  <title>SSM06-Spring问题 - fm</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="SSM06-Spring问题"></span>
           
         </div>
 
@@ -207,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-02-18 17:21" pubdate>
-          2024年2月18日 下午
+        <time datetime="2023-05-30 21:00" pubdate>
+          2023年5月30日 晚上
         </time>
       </span>
     
@@ -219,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2k 字
+          2.5k 字
         
       </span>
     
@@ -230,7 +231,7 @@
         
         
         
-          17 分钟
+          22 分钟
         
       </span>
     
@@ -267,12 +268,17 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">SSM06-Spring问题</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="为什么会选择接口来注入而不是实现类直接注入？"><a href="#为什么会选择接口来注入而不是实现类直接注入？" class="headerlink" title="为什么会选择接口来注入而不是实现类直接注入？"></a>为什么会选择接口来注入而不是实现类直接注入？</h2><p>在 Spring 中，选择接口来注入而不是直接注入实现类有几个重要的原因：</p>
+                <p>了Spring中的问题。</p>
+<span id="more"></span>
+
+
+
+<h2 id="为什么会选择接口来注入而不是实现类直接注入？"><a href="#为什么会选择接口来注入而不是实现类直接注入？" class="headerlink" title="为什么会选择接口来注入而不是实现类直接注入？"></a>为什么会选择接口来注入而不是实现类直接注入？</h2><p>在 Spring 中，选择接口来注入而不是直接注入实现类有几个重要的原因：</p>
 <ol>
 <li><strong>松耦合</strong>：<ul>
 <li>使用接口注入可以实现松耦合（loose coupling）。</li>
@@ -352,6 +358,13 @@
 </ul>
 </li>
 </ol>
+<h2 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h2><h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>简单而言，跨域请求就是当一台服务器资源从另一台服务器（不同 的域名或者端口）请求一个资源或者接口，就会发起一个跨域 HTTP 请求。举个简单的例子，从<a target="_blank" rel="noopener" href="http://www.baidu.com,发送一个/">http://www.baidu.com,发送一个</a> Ajax 请求，请求地址是 <a target="_blank" rel="noopener" href="http://www.taobao.com下面的一个接口,这就是发起了一个跨域请求,在不做任何处理的情况下,显然当前跨域请求是无法被成功请求,因为浏览器基于同源策略会对跨域请求做一定的限制./">http://www.taobao.com下面的一个接口，这就是发起了一个跨域请求，在不做任何处理的情况下，显然当前跨域请求是无法被成功请求，因为浏览器基于同源策略会对跨域请求做一定的限制。</a></p>
+<h3 id="产生跨域问题的条件"><a href="#产生跨域问题的条件" class="headerlink" title="产生跨域问题的条件"></a><strong>产生跨域问题的条件</strong></h3><p>例如: <a href="http://192.168.38.438:8080">http://192.168.38.438:8080</a><br>当协议、IP、端口三部分中有任意一个不同时，即为跨域</p>
+<h2 id="DLL和LIB文件"><a href="#DLL和LIB文件" class="headerlink" title="DLL和LIB文件"></a>DLL和LIB文件</h2><ul>
+<li>动态链接 vs. 静态链接：DLL 文件是动态链接库文件，它在<strong>运行时</strong>被加载到内存中，并通过<strong>动态链接的方式</strong>提供函数和资源给程序使用。LIB 文件是静态链接库文件，它在<strong>编译时</strong>将库代码<strong>直接复制到生成的可执行文件</strong>中，程序在运行时不需要外部的依赖文件。</li>
+<li>共享的代码和资源：DLL 文件和 LIB 文件都包含可重用的代码和资源，通过它们，多个程序可以共享相同的代码实现。</li>
+<li>函数声明和链接：无论是使用 DLL 文件还是 LIB 文件，都需要在程序中进行函数声明，以便在编译时或运行时正确链接和调用库中的函数。</li>
+</ul>
 
                 
               </div>
@@ -360,6 +373,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/SSM/" class="category-chain-item">SSM</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Spring/" class="print-no-link">#Spring</a>
+      
+    </div>
   
 </div>
 
@@ -369,20 +410,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
-      <div>http://example.com/2024/02/18/SSM06-spring问题/</div>
+      <div>SSM06-Spring问题</div>
+      <div>http://example.com/2023/05/30/SSM06-spring问题/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>fm</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年2月18日</div>
+          <div>2023年5月30日</div>
         </div>
       
       
@@ -414,21 +455,15 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/19/Win%E7%9F%A5%E8%AF%86/" title="">
+                      <a href="/2023/05/30/SSM05-Spring%E4%B8%AD%E7%9A%84AOP%E6%A6%82%E5%BF%B5/" title="SSM05-Spring中的AOP概念">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">SSM05-Spring中的AOP概念</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
                   </article>
                   <article class="post-next col-6">
                     
-                    
-                      <a href="/2024/02/04/Qt%E6%8A%A5%E9%94%99/" title="">
-                        <span class="hidden-mobile"></span>
-                        <span class="visible-mobile">下一篇</span>
-                        <i class="iconfont icon-arrowright"></i>
-                      </a>
                     
                   </article>
                 </div>

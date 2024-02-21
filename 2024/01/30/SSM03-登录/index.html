@@ -13,24 +13,26 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="John Doe">
+  <meta name="author" content="fm">
   <meta name="keywords" content="">
   
-    <meta name="description" content="SpringWeb登录登录功能 LoginController  1234567891011121314@Slf4j@RestControllerpublic class LoginController &#123;    @Autowired    EmpService empService;    @PostMapping(&quot;&#x2F;login&quot;)    public Resul">
+    <meta name="description" content="Springboot的Web学习与应用">
 <meta property="og:type" content="article">
-<meta property="og:title" content="fm">
+<meta property="og:title" content="SSM03-登录">
 <meta property="og:url" content="http://example.com/2024/01/30/SSM03-%E7%99%BB%E5%BD%95/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="SpringWeb登录登录功能 LoginController  1234567891011121314@Slf4j@RestControllerpublic class LoginController &#123;    @Autowired    EmpService empService;    @PostMapping(&quot;&#x2F;login&quot;)    public Resul">
+<meta property="og:description" content="Springboot的Web学习与应用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-01-30T06:03:50.754Z">
-<meta property="article:modified_time" content="2024-01-30T18:01:38.702Z">
+<meta property="article:modified_time" content="2024-02-21T09:48:59.636Z">
 <meta property="article:author" content="John Doe">
+<meta property="article:tag" content="JAVA">
+<meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>fm</title>
+  <title>SSM03-登录 - fm</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text=""></span>
+            <span id="subtitle" data-typed-text="SSM03-登录"></span>
           
         </div>
 
@@ -267,12 +269,19 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header"></h1>
+            <h1 id="seo-header">SSM03-登录</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="SpringWeb登录"><a href="#SpringWeb登录" class="headerlink" title="SpringWeb登录"></a>SpringWeb登录</h1><h2 id="登录功能"><a href="#登录功能" class="headerlink" title="登录功能"></a>登录功能</h2><ul>
+                <p>Springboot的Web学习与应用</p>
+<span id="more"></span>
+
+
+
+
+
+<h1 id="SpringWeb登录"><a href="#SpringWeb登录" class="headerlink" title="SpringWeb登录"></a>SpringWeb登录</h1><h2 id="登录功能"><a href="#登录功能" class="headerlink" title="登录功能"></a>登录功能</h2><ul>
 <li>LoginController</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Slf4j</span><br><span class="hljs-meta">@RestController</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">LoginController</span> &#123;<br><br>    <span class="hljs-meta">@Autowired</span><br>    EmpService empService;<br><br>    <span class="hljs-meta">@PostMapping(&quot;/login&quot;)</span><br>    <span class="hljs-keyword">public</span> Result <span class="hljs-title function_">empLogin</span><span class="hljs-params">(<span class="hljs-meta">@RequestBody</span> Emp emp)</span>&#123;<br>        log.info(<span class="hljs-string">&quot;员工登录：&#123;&#125;&quot;</span>,emp);<br>        <span class="hljs-type">Emp</span> <span class="hljs-variable">e</span> <span class="hljs-operator">=</span> empService.getByPW(emp);<br>        <span class="hljs-keyword">return</span> e!=<span class="hljs-literal">null</span>?Result.success():Result.error(<span class="hljs-string">&quot;登录失败&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
@@ -433,6 +442,36 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/JAVA/" class="print-no-link">#JAVA</a>
+      
+        <a href="/tags/web/" class="print-no-link">#web</a>
+      
+    </div>
   
 </div>
 
@@ -442,14 +481,14 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div></div>
+      <div>SSM03-登录</div>
       <div>http://example.com/2024/01/30/SSM03-登录/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>John Doe</div>
+          <div>fm</div>
         </div>
       
       
@@ -487,9 +526,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/02/02/SSM04-AOP/" title="">
+                      <a href="/2024/02/02/SSM04-AOP/" title="SSM04-AOP">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile"></span>
+                        <span class="hidden-mobile">SSM04-AOP</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -497,8 +536,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/25/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2024/01/25/%E5%BF%AB%E6%8D%B7%E9%94%AE/" title="快捷键">
+                        <span class="hidden-mobile">快捷键</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
