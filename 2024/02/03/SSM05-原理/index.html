@@ -13,31 +13,24 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   
   <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="fm">
+  <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Springboot的Web学习与应用">
+    <meta name="description" content="原理项目打包 引入插件  12345&lt;plugin&gt;    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;spring-boot-maven-plugin&lt;&#x2F;artifactId&gt;&lt;plugin&gt;&lt;!--基于官网构建的项目会自动下载--&gt;">
 <meta property="og:type" content="article">
-<meta property="og:title" content="SpringBoot的web学习（一）">
-<meta property="og:url" content="http://example.com/2023/12/12/Springweb%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="fm">
+<meta property="og:url" content="http://example.com/2024/02/03/SSM05-%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="fm">
-<meta property="og:description" content="Springboot的Web学习与应用">
+<meta property="og:description" content="原理项目打包 引入插件  12345&lt;plugin&gt;    &lt;groupId&gt;org.springframework.boot&lt;&#x2F;groupId&gt;    &lt;artifactId&gt;spring-boot-maven-plugin&lt;&#x2F;artifactId&gt;&lt;plugin&gt;&lt;!--基于官网构建的项目会自动下载--&gt;">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/Javaweb-1http%E8%AF%B7%E6%B1%82.png">
-<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-2http%E8%AF%B7%E6%B1%82%E5%A4%B4.png">
-<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-3http%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F.png">
-<meta property="og:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-4http%E5%93%8D%E5%BA%94%E7%A0%81.png">
-<meta property="article:published_time" content="2023-12-12T06:43:36.157Z">
-<meta property="article:modified_time" content="2023-12-17T06:28:45.837Z">
+<meta property="article:published_time" content="2024-02-03T13:10:59.029Z">
+<meta property="article:modified_time" content="2024-02-18T17:52:52.641Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="JAVA">
-<meta property="article:tag" content="web">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/Javaweb-1http%E8%AF%B7%E6%B1%82.png">
   
   
   
-  <title>SpringBoot的web学习（一） - fm</title>
+  <title>fm</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -203,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="SpringBoot的web学习（一）"></span>
+            <span id="subtitle" data-typed-text=""></span>
           
         </div>
 
@@ -214,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-12 14:43" pubdate>
-          2023年12月12日 下午
+        <time datetime="2024-02-03 21:10" pubdate>
+          2024年2月3日 晚上
         </time>
       </span>
     
@@ -226,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.7k 字
         
       </span>
     
@@ -237,7 +230,7 @@
         
         
         
-          9 分钟
+          15 分钟
         
       </span>
     
@@ -274,144 +267,115 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">SpringBoot的web学习（一）</h1>
+            <h1 id="seo-header"></h1>
             
             
               <div class="markdown-body">
                 
-                <p>Springboot的Web学习与应用</p>
-<span id="more"></span>
+                <h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><h2 id="项目打包"><a href="#项目打包" class="headerlink" title="项目打包"></a>项目打包</h2><ul>
+<li><h3 id="引入插件"><a href="#引入插件" class="headerlink" title="引入插件"></a>引入插件</h3></li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>org.springframework.boot<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>spring-boot-maven-plugin<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">plugin</span>&gt;</span><br><span class="hljs-comment">&lt;!--基于官网构建的项目会自动下载--&gt;</span><br></code></pre></td></tr></table></figure>
 
-<h1 id="SpringBoot的web学习"><a href="#SpringBoot的web学习" class="headerlink" title="SpringBoot的web学习"></a>SpringBoot的web学习</h1><h2 id="Http协议"><a href="#Http协议" class="headerlink" title="Http协议"></a>Http协议</h2><ul>
-<li><p><strong>超文本传输协议</strong>，规定了浏览器和服务器之间数据传输的规则</p>
-</li>
-<li><p>特点：</p>
 <ul>
-<li>基于TCP协议，稳定安全</li>
-<li>基于请求-响应模型：一次请求对应一次响应</li>
-<li>HTTP协议是无状态协议，对于事务处理没有记忆能力，每次请求都是独立的<ul>
-<li>优点：速度快</li>
-<li>缺点：多次请求不能共享数据</li>
+<li><h3 id="操作"><a href="#操作" class="headerlink" title="操作"></a>操作</h3><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs clean">maven -&gt; 生命周期 -&gt; package<br></code></pre></td></tr></table></figure>
+
+
+</li>
+<li><h3 id="一些选项"><a href="#一些选项" class="headerlink" title="一些选项"></a>一些选项</h3></li>
+</ul>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">properties</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">java.version</span>&gt;</span>17<span class="hljs-tag">&lt;/<span class="hljs-name">java.version</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">skipTests</span>&gt;</span>true<span class="hljs-tag">&lt;/<span class="hljs-name">skipTests</span>&gt;</span><span class="hljs-comment">&lt;!--跳过测试文件--&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">properties</span>&gt;</span><br></code></pre></td></tr></table></figure>
+
+
+
+<h2 id="Bean对象管理"><a href="#Bean对象管理" class="headerlink" title="Bean对象管理"></a>Bean对象管理</h2><ul>
+<li><h3 id="Bean对象获取方式"><a href="#Bean对象获取方式" class="headerlink" title="Bean对象获取方式"></a>Bean对象获取方式</h3><ul>
+<li>自动注入@Autowired</li>
+<li>通过类名等获取</li>
 </ul>
 </li>
-</ul>
+<li><h3 id="Bean对象作用域"><a href="#Bean对象作用域" class="headerlink" title="Bean对象作用域"></a>Bean对象作用域</h3><ul>
+<li><p><strong>Singleton</strong>：容器内获取的Bean对象都是单例对象，默认情况</p>
 </li>
-</ul>
-<h3 id="HTTP请求数据格式"><a href="#HTTP请求数据格式" class="headerlink" title="HTTP请求数据格式"></a>HTTP请求数据格式</h3><h4 id="POST请求和GET请求形式"><a href="#POST请求和GET请求形式" class="headerlink" title="POST请求和GET请求形式"></a>POST请求和GET请求形式</h4><ul>
-<li>图例</li>
-</ul>
-<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/Javaweb-1http%E8%AF%B7%E6%B1%82.png" srcset="/img/loading.gif" lazyload alt="image-20231212150159442"></p>
-<ul>
-<li>请求头</li>
-</ul>
-<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-2http%E8%AF%B7%E6%B1%82%E5%A4%B4.png" srcset="/img/loading.gif" lazyload alt="image-20231212150419411"></p>
-<ul>
-<li><p>请求体：POST请求，存放请求参数</p>
+<li><p><strong>prototype</strong>：每一次请求对应一个实例对象</p>
 </li>
-<li><p>GET请求与POST请求区别</p>
-<ul>
-<li><p>GET请求无请求体，大小有限制，<strong>通过URL参数传递的，这些参数属于查询字符串（Query String）</strong></p>
+<li><p>…..</p>
+</li>
+<li><p><strong>作用域注解</strong></p>
 <blockquote>
-<p>查询字符串是位于URL末尾的一组键值对，键值对之间用”&amp;”符号连接，键和值之间使用”&#x3D;”符号连接</p>
-<p>GET请求的查询字符串通常用于向服务器传递简单的数据</p>
+<p><strong>@Scope()</strong>  : 设置作用域</p>
+<p><strong>@Lazy</strong>： 懒汉模式，直到第一次被调用的才实例化，仅在单例模式使用</p>
 </blockquote>
 </li>
-<li><p>POST请求有大小限制</p>
+</ul>
+</li>
+<li><h3 id="获取第三方Bean对象"><a href="#获取第三方Bean对象" class="headerlink" title="获取第三方Bean对象"></a>获取第三方Bean对象</h3><ul>
+<li><p>第三方jar包只读的情况下无法进行@Component注解</p>
+</li>
+<li><p><strong>@Bean</strong>注解</p>
+<ul>
+<li><p>一般在配置类里面配置第三方bean对象</p>
+</li>
+<li><p>@Bean可以配置对象的name和value</p>
+<blockquote>
+<bean name="myBean" class="com.example.MyBean"/>
+</blockquote>
+</li>
+<li><p>如果需要依赖bean对象则只需要填入在参数中</p>
 </li>
 </ul>
 </li>
 </ul>
-<h3 id="HTTP响应数据格式"><a href="#HTTP响应数据格式" class="headerlink" title="HTTP响应数据格式"></a>HTTP响应数据格式</h3><ul>
-<li>图例</li>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Configuration</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">StudyinsConfig</span> &#123;<br>    <span class="hljs-meta">@Bean</span><br>    <span class="hljs-keyword">public</span> JwtUtils <span class="hljs-title function_">returnJwtutils</span><span class="hljs-params">(DeptService deptService)</span>&#123;<br>        <span class="hljs-comment">//将此bean对象注入到DeptService类</span><br>        <span class="hljs-comment">//bean对象名称默认就是方法名，也可自行修改</span><br>        <span class="hljs-keyword">return</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">JwtUtils</span>();<span class="hljs-comment">//将这个对象交给IOC管理</span><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>
 </ul>
-<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-3http%E5%93%8D%E5%BA%94%E6%A0%BC%E5%BC%8F.png" srcset="/img/loading.gif" lazyload alt="image-20231212160809457"></p>
+<h2 id="依赖与配置"><a href="#依赖与配置" class="headerlink" title="依赖与配置"></a>依赖与配置</h2><h3 id="起步依赖"><a href="#起步依赖" class="headerlink" title="起步依赖"></a>起步依赖</h3><ul>
+<li><strong>引入spring相关模块依赖并进行版本适配</strong></li>
+<li><strong>起步依赖内包含所需常见依赖，通过maven依赖传递获取某一模块所需常见依赖</strong></li>
+</ul>
+<h3 id="自动配置"><a href="#自动配置" class="headerlink" title="自动配置"></a>自动配置</h3><ul>
+<li><p><strong>当spring容器启动后，一些配置类和Bean对象自动存入到IOC容器中管理，简化了开发</strong></p>
+</li>
+<li><p><strong>springboot只能扫描启动类所在包及其子包</strong></p>
 <ul>
-<li>响应码</li>
+<li><strong>@ComponentScan指定扫描包</strong></li>
+<li><strong>@Import直接导入类（推荐）</strong></li>
+<li>此注解用于启动类之前</li>
 </ul>
-<p><img src="https://fluid-1322937929.cos.ap-beijing.myqcloud.com/image/JavaWeb-4http%E5%93%8D%E5%BA%94%E7%A0%81.png" srcset="/img/loading.gif" lazyload alt="image-20231212161134707"></p>
+</li>
+<li><p><strong>@SpringBootApplication启动类</strong></p>
 <ul>
-<li>常见状态码</li>
+<li>@SpringBootConfiguration：提供配置类</li>
+<li>@EnableAutoConfiguration：核心注解，自动配置的核心，内含@Import注解导入一个类返回所有IOC容器内的对象数组</li>
+<li>@ComponentScan：提供包扫描功能</li>
 </ul>
-<table>
-<thead>
-<tr>
-<th>状态码</th>
-<th>英文描述</th>
-<th>解释</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>200</td>
-<td>OK</td>
-<td>请求处理<strong>成功</strong></td>
-</tr>
-<tr>
-<td>302</td>
-<td>Found</td>
-<td>只是所请求的<strong>资源已移动</strong>到由Location响应头给定的URL,浏览器会自动重新访问</td>
-</tr>
-<tr>
-<td>304</td>
-<td>Not Modified</td>
-<td>隐式重定向。请求<strong>资源上次获取后并未更改</strong>，可以自己在本地缓存访问</td>
-</tr>
-<tr>
-<td>400</td>
-<td>Bad Request</td>
-<td>请求有<strong>语法错误</strong>，服务器并不理解</td>
-</tr>
-<tr>
-<td>403</td>
-<td>Forbidden</td>
-<td>收到请求，但是<strong>拒绝提供服务</strong>（无权限等）</td>
-</tr>
-<tr>
-<td>404</td>
-<td>Not Found</td>
-<td>请求<strong>资源不存在</strong></td>
-</tr>
-<tr>
-<td>405</td>
-<td>Method Not Allowed</td>
-<td>请求<strong>方法有误</strong>，例如POST请求用了GET</td>
-</tr>
-<tr>
-<td>428</td>
-<td>Precondition Required</td>
-<td>服务器要求此请求<strong>有条件</strong>，比如特定的请求头</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests</td>
-<td>太多请求被<strong>限速</strong>了，配合Retry-After(多长时间后可以请求)请求头使用</td>
-</tr>
-<tr>
-<td>431</td>
-<td>Request Header Fields Too Large</td>
-<td><strong>请求头太大</strong>，服务器不愿意处理这个请求</td>
-</tr>
-<tr>
-<td>500</td>
-<td>Internal Serval Error</td>
-<td>服务器<strong>发生不可预期的错误</strong></td>
-</tr>
-<tr>
-<td>503</td>
-<td>Service Unavailable</td>
-<td><strong>服务器未能准备</strong>好处理请求</td>
-</tr>
-</tbody></table>
-<h3 id="协议解析"><a href="#协议解析" class="headerlink" title="协议解析"></a>协议解析</h3><ul>
-<li>web服务器用于处理和返回http格式的请求和数据，对HTTP协议进行封装</li>
-<li>常见的web服务器： <strong>Tomcat</strong></li>
+</li>
+<li><p><strong>@Conditional</strong></p>
+<ul>
+<li>作用：按照一定的条件进行判断,在满足给定条件后才会注册对应的bean对象到Spring IOC容器中。</li>
+<li>位置：方法、类</li>
+<li>@Conditional 本身是一个父注解,派生出大量的子注解<ul>
+<li>@ConditionalOnClass：判断环境中是否有对应字节码文件,才注册bean到IOC容器</li>
+<li>@ConditionalOnMissingBean：判断环境中没有对应的bean (类型或名称) , 才注册bean到IOC容器</li>
+<li>@ConditionalOnProperty：判断配置文件中有对应属性和值，才注册bean到IOC容器</li>
 </ul>
-<h2 id="Tomcat"><a href="#Tomcat" class="headerlink" title="Tomcat"></a>Tomcat</h2><ul>
-<li>一个Apache旗下的开源免费的Web服务器，支持Servlet&#x2F;JSP少量javaEE规范</li>
-<li>JavaEE：Java企业版，指Java企业级开发的计数规范的总和，包括JDBC，JNDL等等</li>
-<li>Tomcat也被称为Web容器，Servlet容器，Servclet依赖于Tomcat运行</li>
+</li>
 </ul>
-<h3 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h3><ul>
-<li>SpringBoot内嵌了Tomcat,也可自行下载</li>
+</li>
+</ul>
+<h3 id="自定义Starter"><a href="#自定义Starter" class="headerlink" title="自定义Starter"></a>自定义Starter</h3><ul>
+<li><p>自定义起步依赖</p>
+</li>
+<li><p><strong>包含所有该起步依赖功能所需的依赖</strong></p>
+</li>
+<li><p>一般命名格式：功能-spring-boot-starter，表示是第三方提供</p>
+</li>
+<li><p><strong>操作</strong></p>
+<ul>
+<li>创建对应功能模块，aliyun-oss-spring-boot-starter，对应依赖管理功能</li>
+<li>创建自动配置模块，aliyun-oss-spring-boot-autoconfigure，对应自动配置功能</li>
+<li>自己配置aliyun-oss-spring-boot-autoconfigure自动配置功能，并定义自动配置文件META-INF&#x2F;spring&#x2F;xxx.import</li>
+</ul>
+</li>
 </ul>
 
                 
@@ -421,36 +385,6 @@
             <div>
               <div class="post-metas my-3">
   
-    <div class="post-meta mr-3 d-flex align-items-center">
-      <i class="iconfont icon-category"></i>
-      
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/%E5%90%8E%E7%AB%AF/" class="category-chain-item">后端</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-    </div>
-  
-  
-    <div class="post-meta">
-      <i class="iconfont icon-tags"></i>
-      
-        <a href="/tags/JAVA/" class="print-no-link">#JAVA</a>
-      
-        <a href="/tags/web/" class="print-no-link">#web</a>
-      
-    </div>
   
 </div>
 
@@ -460,20 +394,20 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>SpringBoot的web学习（一）</div>
-      <div>http://example.com/2023/12/12/Springweb学习（一）/</div>
+      <div></div>
+      <div>http://example.com/2024/02/03/SSM05-原理/</div>
     </div>
     <div class="license-meta">
       
         <div class="license-meta-item">
           <div>作者</div>
-          <div>fm</div>
+          <div>John Doe</div>
         </div>
       
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年12月12日</div>
+          <div>2024年2月3日</div>
         </div>
       
       
@@ -505,9 +439,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/12/Springweb%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" title="SpringBoot的web学习（二）">
+                      <a href="/2024/02/04/Qt%E6%8A%A5%E9%94%99/" title="">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">SpringBoot的web学习（二）</span>
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -515,8 +449,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/11/Vue%E5%AD%A6%E4%B9%A0/" title="Vue学习">
-                        <span class="hidden-mobile">Vue学习</span>
+                      <a href="/2024/02/02/SSM04-AOP/" title="">
+                        <span class="hidden-mobile"></span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
