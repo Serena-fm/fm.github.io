@@ -24,7 +24,7 @@
 <meta property="og:description" content="JDBC连接数据库的学习与应用">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-01T04:36:00.424Z">
-<meta property="article:modified_time" content="2024-02-21T11:18:36.318Z">
+<meta property="article:modified_time" content="2024-03-04T10:32:45.389Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="JAVA">
 <meta property="article:tag" content="JDBC">
@@ -221,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.8k 字
+          3.5k 字
         
       </span>
     
@@ -232,7 +232,7 @@
         
         
         
-          24 分钟
+          30 分钟
         
       </span>
     
@@ -436,7 +436,18 @@
 </li>
 <li><p>功能：允许应用重复使用一个现有的数据库连接，而不是重新建立一个；<strong>意思就是从一个用户一个连接到所有用户共享一个到数据库的连接</strong>，&#x3D;&#x3D;本质是通过管理多个connection都通过一个连接到数据库&#x3D;&#x3D;</p>
 </li>
-<li><p>好处：资源重用，提升响应速度，避免数据库连接遗漏</p>
+<li><p>数据库连接池是一种用于管理和复用数据库连接的缓存机制，它可以提高应用程序对数据库的访问效率并减少资源消耗。在数据库连接池的配置中，通常会涉及到几个关键的参数，包括最大空闲连接数和最小空闲连接数</p>
+</li>
+</ul>
+<h2 id="最大空闲连接数（Maximum-Idle-Connections）"><a href="#最大空闲连接数（Maximum-Idle-Connections）" class="headerlink" title="最大空闲连接数（Maximum Idle Connections）"></a>最大空闲连接数（Maximum Idle Connections）</h2><p>  最大空闲连接数定义了连接池中可以保持的空闲连接的最大数量。当连接被创建并返回到连接池时，如果连接池中的连接数已经达到了最大空闲连接数，那么这个连接可能会被关闭，或者如果该连接是新创建的，则可能不会被添加到池中。设置一个合理的最大空闲连接数可以避免资源的浪费，同时确保有足够的连接来处理潜在的高并发请求。</p>
+<h2 id="最小空闲连接数（Minimum-Idle-Connections）"><a href="#最小空闲连接数（Minimum-Idle-Connections）" class="headerlink" title="最小空闲连接数（Minimum Idle Connections）"></a>最小空闲连接数（Minimum Idle Connections）</h2><p>  最小空闲连接数定义了连接池中应该保持的空闲连接的最小数量。连接池会根据这个参数来维护一定数量的空闲连接，以减少获取连接时的延迟。当连接池中的连接数低于这个阈值时，连接池会创建新的连接，直到达到最小空闲连接数。这样可以确保总是有可用的连接来处理请求，特别是在系统负载较高时。</p>
+<ul>
+<li><p>参数配置的影响</p>
+<blockquote>
+<p>如果最大空闲连接数设置得太小，可能会导致在高并发情况下，连接池需要频繁地创建和关闭连接，从而增加了系统的开销。<br>  如果最大空闲连接数设置得太大，可能会浪费系统资源，因为维持过多的空闲连接会占用不必要的数据库资源。<br>  最小空闲连接数设置得太小，可能会导致在请求高峰时，连接池需要临时创建大量新连接，从而增加了响应时间。<br>  最小空闲连接数设置得太大，可能会导致在低负载时，维持过多的空闲连接，同样浪费资源。</p>
+</blockquote>
+</li>
+<li><p>因此，合理配置最大空闲连接数和最小空闲连接数对于平衡系统的性能和资源利用率是非常重要的。通常，这些参数需要根据应用程序的预期负载、数据库的性能和可用的系统资源来进行调整。</p>
 </li>
 </ul>
 <h2 id="数据库池实现"><a href="#数据库池实现" class="headerlink" title="数据库池实现"></a>数据库池实现</h2><ul>
@@ -554,9 +565,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/05/Java%E5%9F%BA%E7%A1%80/" title="Java面向对象基础">
+                      <a href="/2023/12/05/Java%E5%85%A5%E9%97%A803/" title="Java入门03">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Java面向对象基础</span>
+                        <span class="hidden-mobile">Java入门03</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     

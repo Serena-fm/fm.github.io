@@ -24,7 +24,7 @@
 <meta property="og:description" content="了Spring中的问题。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-05-30T13:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-21T09:53:20.666Z">
+<meta property="article:modified_time" content="2024-03-22T09:31:16.626Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="Spring">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.5k 字
+          9.7k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          22 分钟
+          81 分钟
         
       </span>
     
@@ -360,11 +360,115 @@
 </ol>
 <h2 id="跨域问题"><a href="#跨域问题" class="headerlink" title="跨域问题"></a>跨域问题</h2><h3 id="什么是跨域"><a href="#什么是跨域" class="headerlink" title="什么是跨域"></a>什么是跨域</h3><p>简单而言，跨域请求就是当一台服务器资源从另一台服务器（不同 的域名或者端口）请求一个资源或者接口，就会发起一个跨域 HTTP 请求。举个简单的例子，从<a target="_blank" rel="noopener" href="http://www.baidu.com,发送一个/">http://www.baidu.com,发送一个</a> Ajax 请求，请求地址是 <a target="_blank" rel="noopener" href="http://www.taobao.com下面的一个接口,这就是发起了一个跨域请求,在不做任何处理的情况下,显然当前跨域请求是无法被成功请求,因为浏览器基于同源策略会对跨域请求做一定的限制./">http://www.taobao.com下面的一个接口，这就是发起了一个跨域请求，在不做任何处理的情况下，显然当前跨域请求是无法被成功请求，因为浏览器基于同源策略会对跨域请求做一定的限制。</a></p>
 <h3 id="产生跨域问题的条件"><a href="#产生跨域问题的条件" class="headerlink" title="产生跨域问题的条件"></a><strong>产生跨域问题的条件</strong></h3><p>例如: <a href="http://192.168.38.438:8080">http://192.168.38.438:8080</a><br>当协议、IP、端口三部分中有任意一个不同时，即为跨域</p>
+<h3 id="CORS请求问题"><a href="#CORS请求问题" class="headerlink" title="CORS请求问题"></a>CORS请求问题</h3><ul>
+<li>跨域请求每次浏览器都会预先发送一次预检请求来去确认资源是否可以访问，方法为OPTIONS</li>
+</ul>
 <h2 id="DLL和LIB文件"><a href="#DLL和LIB文件" class="headerlink" title="DLL和LIB文件"></a>DLL和LIB文件</h2><ul>
 <li>动态链接 vs. 静态链接：DLL 文件是动态链接库文件，它在<strong>运行时</strong>被加载到内存中，并通过<strong>动态链接的方式</strong>提供函数和资源给程序使用。LIB 文件是静态链接库文件，它在<strong>编译时</strong>将库代码<strong>直接复制到生成的可执行文件</strong>中，程序在运行时不需要外部的依赖文件。</li>
 <li>共享的代码和资源：DLL 文件和 LIB 文件都包含可重用的代码和资源，通过它们，多个程序可以共享相同的代码实现。</li>
 <li>函数声明和链接：无论是使用 DLL 文件还是 LIB 文件，都需要在程序中进行函数声明，以便在编译时或运行时正确链接和调用库中的函数。</li>
 </ul>
+<h2 id="什么是Servlet"><a href="#什么是Servlet" class="headerlink" title="什么是Servlet"></a>什么是Servlet</h2><ul>
+<li>Servlet是Java Servlet API的一部分，是一个Java类，<strong>用于接收和响应客户端发送的请求</strong>。它是Java EE（现在称为Jakarta EE）平台的一部分，主要用于Web应用程序。Servlet作为服务器端软件，运行在支持Java的Web服务器上，如Apache Tomcat、Jetty或GlassFish。</li>
+</ul>
+<h3 id="Servlet的主要功能包括："><a href="#Servlet的主要功能包括：" class="headerlink" title="Servlet的主要功能包括："></a>Servlet的主要功能包括：</h3><ul>
+<li>请求处理：Servlet可以接收来自客户端（如Web浏览器）的请求，并对这些请求进行处理。</li>
+<li>响应生成：Servlet可以生成响应，并将它们发送回客户端。这些响应通常是HTML页面，但也可能是其他格式，如JSON、XML等。</li>
+<li>数据转换：Servlet可以处理客户端发送的数据，如表单数据，并将这些数据转换为服务器端可以处理的形式。</li>
+<li>会话管理：Servlet可以管理用户会话，跟踪用户的状态，这对于需要用户登录和个性化体验的Web应用程序非常重要。</li>
+<li>安全性：Servlet可以实现访问控制，确保只有授权的用户才能访问特定的资源。</li>
+<li>数据持久化：Servlet可以与数据库或其他数据存储系统交互，用于读取和更新数据。</li>
+</ul>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li><p>Servlet的生命周期由Servlet容器（如Web服务器）管理。当请求到达服务器时，容器创建Servlet实例，调用其service方法来处理请求，然后销毁实例。Servlet容器还负责加载、初始化和卸载Servlet。</p>
+</li>
+<li><p>Servlet API提供了一组标准的方法，<strong>如doGet、doPost、doPut、doDelete等，用于处理不同类型的HTTP方法（请求）</strong>。这些方法由Servlet容器调用，以响应用户的请求。</p>
+</li>
+<li><p>在Spring框架中，Servlet API仍然是一个重要的组成部分，但Spring MVC（Model-View-Controller）框架提供了一种更高级的Web应用程序开发方式，它使用Controller类来处理请求，而不是直接使用Servlet。尽管如此，Spring MVC框架底层仍然使用Servlet API来处理HTTP请求和响应。</p>
+</li>
+</ul>
+<h2 id="什么是初始化器"><a href="#什么是初始化器" class="headerlink" title="什么是初始化器"></a>什么是初始化器</h2><ul>
+<li>WebApplicationInitializer 的主要作用是简化Spring MVC应用程序的配置过程，提供了一种无需XML配置文件就能初始化Spring容器和Web应用程序的方式</li>
+</ul>
+<h3 id="springboot使用初始化器"><a href="#springboot使用初始化器" class="headerlink" title="springboot使用初始化器"></a>springboot使用初始化器</h3><ul>
+<li>Spring Boot 本身是一个微框架（microframework），它旨在简化Spring应用的开发。Spring Boot 提供了一系列的自动配置和默认值，以减少开发者的配置工作。然而，在某些情况下，你可能需要自定义初始化器（Spring Boot Initializr）来满足特定的需求。以下是一些可能需要配置初始化器的情况：</li>
+</ul>
+<blockquote>
+<p> 1.定制Banner：Spring Boot 启动时会显示一个banner，显示项目信息和版本号。如果你想要定制这个banner，可以通过SpringApplicationBuilder来创建一个自定义的SpringApplication。</p>
+<p> 2.添加额外的properties文件：Spring Boot 默认会加载application.properties或application.yml文件。如果你需要在应用启动时加载其他的properties文件，可以通过SpringApplicationBuilder来添加。</p>
+<p> 3.设置不同的应用类型：Spring Boot 支持不同的应用类型，如Web应用程序、命令行应用程序等。如果你需要设置不同的应用类型，可以通过SpringApplicationBuilder来指定。</p>
+<p> 4.自定义运行时监听器：Spring Boot 应用可以使用SpringApplicationRunListeners来监听应用的启动和关闭过程。如果你需要添加自定义的监听器，可以通过编程的方式注册。</p>
+<p> 5.自定义环境设置：Spring Boot 应用可以使用SpringApplicationBuilder来设置自定义的环境信息，例如设置系统属性或环境变量。</p>
+<p> 6.禁用或启用自动配置：Spring Boot 的一大特点是自动配置，但在某些情况下，你可能需要禁用或启用特定的自动配置。这可以通过编程方式来控制。</p>
+<p> 7.指定自定义的SpringApplication：如果你需要创建一个完全自定义的SpringApplication，可以通过编程方式来创建，而不是使用SpringApplicationBuilder。</p>
+<p> 8.应用自定义的JavaAgent：在某些情况下，你可能需要向Spring Boot应用中添加自定义的JavaAgent，以修改JVM的行为。</p>
+<p> 9.处理程序映射的定制：如果你需要定制Spring Boot应用中的处理程序映射，可以通过编程方式来控制。</p>
+<p> 10.资源加载和转换：Spring Boot 应用可以使用SpringApplicationBuilder来指定自定义的资源加载器，以支持不同的资源加载和转换需求。</p>
+</blockquote>
+<ul>
+<li>通常，这些情况都是针对Spring Boot应用的高级定制需求。对于大多数简单的Spring Boot应用，默认的初始化器和自动配置就足够了。只有在特殊情况下，才需要配置初始化器来自定义Spring Boot应用的行为。</li>
+</ul>
+<h2 id="序列化与反序列化"><a href="#序列化与反序列化" class="headerlink" title="序列化与反序列化"></a>序列化与反序列化</h2><p>在我们网络交流中，采用的通信格式多种多样，但是传输的的时候都是二进制码，将原本的信息序列化为二进制码叫序列化，反过来叫反序列化</p>
+<ul>
+<li>把对象转换为字节序列的过程称为对象的序列化</li>
+<li>把字节序列恢复为对象的过程称为对象的反序列化</li>
+<li>序列化对于面向对象的编程语言来说是非常重要的，因为无论什么编程语言，其底层涉及IO操作的部分还是由操作系统其帮其完成的，而底层IO操作都是以字节流的方式进行的，所以写操作都涉及将编程语言数据类型转换为字节流，而读操作则又涉及将字节流转化为编程语言类型的特定数据类型。</li>
+</ul>
+<h3 id="什么是Serializable接口"><a href="#什么是Serializable接口" class="headerlink" title="什么是Serializable接口"></a>什么是Serializable接口</h3><p>一个对象序列化的接口，一个类只有实现了Serializable接口，它的对象才能被序列化。</p>
+<p>Serializable是java.io包中定义的、用于实现Java类的序列化操作而提供的一个语义级别的接口。</p>
+<p>Serializable序列化接口没有任何方法或者字段，只是用于标识可序列化的语义。</p>
+<blockquote>
+<p>序列化通常用于将对象存储到文件、数据库或通过网络传输对象时。尽管可以直接将数据保存到MySQL、Oracle等数据库中而不需要序列化，这主要是因为这些数据库提供了直接操作数据结构（如表、列等）的能力，而不是操作对象本身。</p>
+</blockquote>
+<h2 id="什么是持久化？"><a href="#什么是持久化？" class="headerlink" title="什么是持久化？"></a>什么是持久化？</h2><p>持久化（Persistence）在计算机科学中指的是<strong>将数据保存到能够长期存储的存储介质中的过程</strong>，这样即使在电源关闭或系统崩溃之后，数据仍然可以保持并能够被恢复。持久化是确保数据不会因为应用程序或系统的结束而丢失的关键机制。<br>在不同的上下文中，持久化可能有不同的含义：</p>
+<ul>
+<li>对象持久化：在<strong>面向对象编程中，对象持久化是指将内存中的对象状态保存到诸如关系数据库、对象数据库、文件系统或其他形式的永久存储中的过程</strong>。这样，对象在程序不再运行时仍然存在，可以在未来的某个时间点被重新加载到内存中，通常具有与之前相同的状态。</li>
+<li>数据持久化：数据持久化是一个更广泛的概念，它不仅包括对象持久化，还包括任何类型的数据的存储，如用户配置、文件、系统设置等。</li>
+</ul>
+<h3 id="持久化技术通常包括以下几种："><a href="#持久化技术通常包括以下几种：" class="headerlink" title="持久化技术通常包括以下几种："></a>持久化技术通常包括以下几种：</h3><ul>
+<li>关系数据库：如MySQL、Oracle、SQL Server等，通过SQL语句将数据保存到表中。</li>
+<li>NoSQL数据库：如MongoDB、Cassandra、Redis等，提供了更灵活的数据模型和高效的存储机制。</li>
+<li>对象数据库：如ObjectDB、db4o等，可以直接存储对象图。</li>
+<li>文件系统：将数据保存为文件，可以是文本文件、二进制文件等。</li>
+<li>分布式存储系统：如Hadoop的HDFS、Amazon S3等，提供了高可用性和可扩展性的数据存储解决方案。<br>持久化是现代软件系统中不可或缺的一部分，它确保了数据的长期保存和可靠性。</li>
+</ul>
+<h2 id="xxxxxxxxxx57-1package-com-itheima-aop-2​3import-org-aspectj-lang-JoinPoint-4import-org-aspectj-lang-ProceedingJoinPoint-5import-org-aspectj-lang-annotation-6import-org-springframework-stereotype-Component-7​8import-java-util-Arrays-9​10-Component11-Aspect12public-class-MyAdvice-13-Pointcut-“execution-com-itheima-dao-BookDao-findName-”-14-private-void-pt-15​16-JoinPoint：用于描述切入点的对象，必须配置成通知方法中的第一个参数，可用于获取原始方法调用的参数17-Before-“pt-”-18-public-void-before-JoinPoint-jp-19-Object-args-jp-getArgs-20-System-out-println-Arrays-toString-args-21-System-out-println-“before-advice-…”-22-23​24-After-“pt-”-25-public-void-after-JoinPoint-jp-26-Object-args-jp-getArgs-27-System-out-println-Arrays-toString-args-28-System-out-println-“after-advice-…”-29-30​31-ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用32-Around-“pt-”-33-public-Object-around-ProceedingJoinPoint-pjp-34-Object-args-pjp-getArgs-35-System-out-println-Arrays-toString-args-36-args-0-666-37-Object-ret-null-38-try-39-ret-pjp-proceed-args-40-catch-Throwable-t-41-t-printStackTrace-42-43-return-ret-44-45​46-设置返回后通知获取原始方法的返回值，要求returning属性值必须与方法形参名相同47-AfterReturning-value-“pt-”-returning-“ret”-48-public-void-afterReturning-JoinPoint-jp-String-ret-49-System-out-println-“afterReturning-advice-…”-ret-50-51​52-设置抛出异常后通知获取原始方法运行时抛出的异常对象，要求throwing属性值必须与方法形参名相同53-AfterThrowing-value-“pt-”-throwing-“t”-54-public-void-afterThrowing-Throwable-t-55-System-out-println-“afterThrowing-advice-…”-t-56-57-java"><a href="#xxxxxxxxxx57-1package-com-itheima-aop-2​3import-org-aspectj-lang-JoinPoint-4import-org-aspectj-lang-ProceedingJoinPoint-5import-org-aspectj-lang-annotation-6import-org-springframework-stereotype-Component-7​8import-java-util-Arrays-9​10-Component11-Aspect12public-class-MyAdvice-13-Pointcut-“execution-com-itheima-dao-BookDao-findName-”-14-private-void-pt-15​16-JoinPoint：用于描述切入点的对象，必须配置成通知方法中的第一个参数，可用于获取原始方法调用的参数17-Before-“pt-”-18-public-void-before-JoinPoint-jp-19-Object-args-jp-getArgs-20-System-out-println-Arrays-toString-args-21-System-out-println-“before-advice-…”-22-23​24-After-“pt-”-25-public-void-after-JoinPoint-jp-26-Object-args-jp-getArgs-27-System-out-println-Arrays-toString-args-28-System-out-println-“after-advice-…”-29-30​31-ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用32-Around-“pt-”-33-public-Object-around-ProceedingJoinPoint-pjp-34-Object-args-pjp-getArgs-35-System-out-println-Arrays-toString-args-36-args-0-666-37-Object-ret-null-38-try-39-ret-pjp-proceed-args-40-catch-Throwable-t-41-t-printStackTrace-42-43-return-ret-44-45​46-设置返回后通知获取原始方法的返回值，要求returning属性值必须与方法形参名相同47-AfterReturning-value-“pt-”-returning-“ret”-48-public-void-afterReturning-JoinPoint-jp-String-ret-49-System-out-println-“afterReturning-advice-…”-ret-50-51​52-设置抛出异常后通知获取原始方法运行时抛出的异常对象，要求throwing属性值必须与方法形参名相同53-AfterThrowing-value-“pt-”-throwing-“t”-54-public-void-afterThrowing-Throwable-t-55-System-out-println-“afterThrowing-advice-…”-t-56-57-java" class="headerlink" title="xxxxxxxxxx57 1package com.itheima.aop;2​3import org.aspectj.lang.JoinPoint;4import org.aspectj.lang.ProceedingJoinPoint;5import org.aspectj.lang.annotation.;6import org.springframework.stereotype.Component;7​8import java.util.Arrays;9​10@Component11@Aspect12public class MyAdvice {13    @Pointcut(“execution( com.itheima.dao.BookDao.findName(..))”)14    private void pt(){}15​16    &#x2F;&#x2F;JoinPoint：用于描述切入点的对象，必须配置成通知方法中的第一个参数，可用于获取原始方法调用的参数17&#x2F;&#x2F;    @Before(“pt()”)18    public void before(JoinPoint jp) {19        Object[] args &#x3D; jp.getArgs();20        System.out.println(Arrays.toString(args));21        System.out.println(“before advice …” );22    }23​24&#x2F;&#x2F;    @After(“pt()”)25    public void after(JoinPoint jp) {26        Object[] args &#x3D; jp.getArgs();27        System.out.println(Arrays.toString(args));28        System.out.println(“after advice …”);29    }30​31    &#x2F;&#x2F;ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用32&#x2F;&#x2F;    @Around(“pt()”)33    public Object around(ProceedingJoinPoint pjp) {34        Object[] args &#x3D; pjp.getArgs();35        System.out.println(Arrays.toString(args));36        args[0] &#x3D; 666;37        Object ret &#x3D; null;38        try {39            ret &#x3D; pjp.proceed(args);40        } catch (Throwable t) {41            t.printStackTrace();42        }43        return ret;44    }45​46    &#x2F;&#x2F;设置返回后通知获取原始方法的返回值，要求returning属性值必须与方法形参名相同47    @AfterReturning(value &#x3D; “pt()”,returning &#x3D; “ret”)48    public void afterReturning(JoinPoint jp,String ret) {49        System.out.println(“afterReturning advice …”+ret);50    }51​52    &#x2F;&#x2F;设置抛出异常后通知获取原始方法运行时抛出的异常对象，要求throwing属性值必须与方法形参名相同53    @AfterThrowing(value &#x3D; “pt()”,throwing &#x3D; “t”)54    public void afterThrowing(Throwable t) {55        System.out.println(“afterThrowing advice …”+t);56    }57}java"></a>xxxxxxxxxx57 1package com.itheima.aop;2​3import org.aspectj.lang.JoinPoint;4import org.aspectj.lang.ProceedingJoinPoint;5import org.aspectj.lang.annotation.<em>;6import org.springframework.stereotype.Component;7​8import java.util.Arrays;9​10@Component11@Aspect12public class MyAdvice {13    @Pointcut(“execution(</em> com.itheima.dao.BookDao.findName(..))”)14    private void pt(){}15​16    &#x2F;&#x2F;JoinPoint：用于描述切入点的对象，必须配置成通知方法中的第一个参数，可用于获取原始方法调用的参数17&#x2F;&#x2F;    @Before(“pt()”)18    public void before(JoinPoint jp) {19        Object[] args &#x3D; jp.getArgs();20        System.out.println(Arrays.toString(args));21        System.out.println(“before advice …” );22    }23​24&#x2F;&#x2F;    @After(“pt()”)25    public void after(JoinPoint jp) {26        Object[] args &#x3D; jp.getArgs();27        System.out.println(Arrays.toString(args));28        System.out.println(“after advice …”);29    }30​31    &#x2F;&#x2F;ProceedingJoinPoint：专用于环绕通知，是JoinPoint子类，可以实现对原始方法的调用32&#x2F;&#x2F;    @Around(“pt()”)33    public Object around(ProceedingJoinPoint pjp) {34        Object[] args &#x3D; pjp.getArgs();35        System.out.println(Arrays.toString(args));36        args[0] &#x3D; 666;37        Object ret &#x3D; null;38        try {39            ret &#x3D; pjp.proceed(args);40        } catch (Throwable t) {41            t.printStackTrace();42        }43        return ret;44    }45​46    &#x2F;&#x2F;设置返回后通知获取原始方法的返回值，要求returning属性值必须与方法形参名相同47    @AfterReturning(value &#x3D; “pt()”,returning &#x3D; “ret”)48    public void afterReturning(JoinPoint jp,String ret) {49        System.out.println(“afterReturning advice …”+ret);50    }51​52    &#x2F;&#x2F;设置抛出异常后通知获取原始方法运行时抛出的异常对象，要求throwing属性值必须与方法形参名相同53    @AfterThrowing(value &#x3D; “pt()”,throwing &#x3D; “t”)54    public void afterThrowing(Throwable t) {55        System.out.println(“afterThrowing advice …”+t);56    }57}java</h2><p>Swagger 3，也称为 OpenAPI Specification 3，是一种用于描述、消费和可视化 RESTful 网络服务的规范。</p>
+<h3 id="Controller"><a href="#Controller" class="headerlink" title="Controller"></a>Controller</h3><p>@Tag</p>
+<h3 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h3><p>@Operation</p>
+<h3 id="entity或者pojo（对外可暴露实体类属性集合）"><a href="#entity或者pojo（对外可暴露实体类属性集合）" class="headerlink" title="entity或者pojo（对外可暴露实体类属性集合）"></a>entity或者pojo（对外可暴露实体类属性集合）</h3><p>@Schema</p>
+<h2 id="全局异常处理器"><a href="#全局异常处理器" class="headerlink" title="全局异常处理器"></a>全局异常处理器</h2><p>不用try catch了</p>
+<ul>
+<li>新建GlobalExeptionHandle</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-meta">@Slf4j</span><br><span class="hljs-meta">@RestControllerAdvice</span><span class="hljs-comment">//</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">GlobalExceptionHandler</span><br>&#123;<br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 默认全局异常处理。</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@param</span> e the e</span><br><span class="hljs-comment">     * <span class="hljs-doctag">@return</span> ResultData</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@ExceptionHandler(RuntimeException.class)</span><br>    <span class="hljs-comment">/**</span><br><span class="hljs-comment">     * 在Spring框架中，当你在一个标注有 <span class="hljs-doctag">@ControllerAdvice</span> 或 <span class="hljs-doctag">@RestControllerAdvice</span> 的类中使用 <span class="hljs-doctag">@ExceptionHandler</span> 注解</span><br><span class="hljs-comment">     * 时，你是在定义一个全局的异常处理方法。这意味着，当你的应用程序中任何一个控制器（<span class="hljs-doctag">@Controller</span> 或 <span class="hljs-doctag">@RestController</span>）发生 </span><br><span class="hljs-comment">     * RuntimeException 或其子类的异常时，都会调用这个方法来处理异常</span><br><span class="hljs-comment">     */</span><br>    <span class="hljs-meta">@ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)</span><br>    <span class="hljs-comment">//返回http状态码</span><br>    <span class="hljs-keyword">public</span> ResultData&lt;String&gt; <span class="hljs-title function_">exception</span><span class="hljs-params">(Exception e)</span> &#123;<br>        <span class="hljs-comment">//自定义返回情况，返回数据</span><br>        System.out.println(<span class="hljs-string">&quot;----come in GlobalExceptionHandler&quot;</span>);<br>        log.error(<span class="hljs-string">&quot;全局异常信息exception:&#123;&#125;&quot;</span>, e.getMessage(), e);<br>        <span class="hljs-keyword">return</span> ResultData.fail(ReturnCodeEnum.RC500.getCode(),e.getMessage());<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<blockquote>
+<p>@RestControllerAdvice 是一个组合注解，它是 @ControllerAdvice 和 @ResponseBody 注解的快捷方式。</p>
+<p>在Spring框架中，@RestControllerAdvice 用于定义全局的异常处理类，以及全局的数据绑定和预处理逻辑。</p>
+<p>@ControllerAdvice 注解用于标识一个类，该类会包含一个或多个如下类型的组件：</p>
+<ul>
+<li><p>@ExceptionHandler 方法，用于处理全局的异常。</p>
+</li>
+<li><p>@InitBinder 方法，用于设置 WebDataBinder，比如在数据绑定之前将字符串转换为日期。</p>
+</li>
+<li><p>@ModelAttribute 方法，用于添加全局的模型属性。</p>
+<p>@ResponseBody 注解则表示该类的所有方法返回值都会直接作为响应体返回给客户端，而不是被视图解析器处理。<br>因此，@RestControllerAdvice 结合了这两个注解的功能，允许你在一个地方集中处理整个应用程序的异常情况，并且能够直接返回异常信息给客户端，常用于RESTful API开发中。通过这种方式，你不需要在每个 @RestController 中重复编写异常处理逻辑，提高了代码的可维护性和复用性。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="什么是RestTemplate"><a href="#什么是RestTemplate" class="headerlink" title="什么是RestTemplate"></a>什么是RestTemplate</h2><p>RestTemplate 是 Spring 框架的一部分，它<strong>是 Spring 提供的一个同步的客户端 HTTP 访问模板工具</strong>，用于发起 HTTP 请求和接收响应。它不依赖于 Servlet API，因此不需要在 Web 容器或 Servlet 环境中运行。</p>
+<p><strong>RestTemplate 是一个独立的类，可以在任何 Java 应用程序中使用</strong>，包括命令行应用程序、桌面应用程序、微服务或者其他任何不需要 Servlet API 的环境<strong>。它内部使用 Java 的 HTTP 客户端库来实现 HTTP 通信</strong>，比如 HttpURLConnection（JDK 自带的 HTTP 客户端）或者 Apache HttpComponents（Apache 提供的 HTTP 客户端库）。</p>
+<p>相比之下，Spring MVC 中的 @RestController 和 @RequestMapping 等注解是建立在 Servlet API 之上的，它们通常用于构建 Web 服务端应用程序，需要在支持 Servlet 的 Web 容器（如 Apache Tomcat、Jetty 等）中运行。</p>
+<p>总结来说，RestTemplate 是一个客户端工具，用于发起 HTTP 请求，它不依赖于 Servlet API，可以在任何 Java 应用程序中使用。而 Servlet 相关的技术通常用于构建 Web 服务端应用程序。</p>
+<blockquote>
+<p><strong>RestTemplate的post和get请求 都可以直接接收返回值。</strong></p>
+<p><strong>但是put与delete方法为void，无法接收返回值，无法满足业务需求</strong></p>
+<p><strong>若想接收返回值 使用restTemplate.exchange方法</strong></p>
+</blockquote>
+<h2 id="AMD和ARM"><a href="#AMD和ARM" class="headerlink" title="AMD和ARM"></a>AMD和ARM</h2><p>Windows AMD 和 ARM64 是两种不同的处理器架构，它们在多个方面有所区别：<br>处理器架构：<br>AMD：通常指的是基于 x86 或 x86-64（也称为 AMD64）架构的处理器。这是一种由 Intel 和 AMD 共同开发的复杂指令集计算（CISC）架构，它历史悠久，广泛用于台式机、笔记本电脑和服务器中。<br>ARM64：也称为 ARMv8-A，是一种基于 ARM 架构的处理器，使用的是精简指令集计算（RISC）。ARM 架构主要用于移动设备、嵌入式系统和一些特定的服务器。</p>
+<blockquote>
+<p>是的，Intel 80386（通常简称为386）是32位微处理器。</p>
+</blockquote>
 
                 
               </div>
